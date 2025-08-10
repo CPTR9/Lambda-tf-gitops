@@ -16,8 +16,11 @@ jobs:
       - name: Check Out
         uses: actions/checkout@v4.2.2
 
-      - name: Terraform Initialize
+      - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2.0.3
+
+      - name: Initialize Terraform
+        run: terraform init
 
       - name: Format Terraform Files
         run: terraform fmt -check
