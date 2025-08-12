@@ -1,4 +1,4 @@
-import os
+import json
 
 def lambda_handler(event, context):
     # Sample Lambda function handler
