@@ -7,7 +7,7 @@ resource "aws_lambda_function" "test1" {
   function_name    = "test1"
   handler          = "Lambda.lambda_handler"
   runtime          = "python3.12"
-  role             = "arn:aws:iam::268345526554:role/y1"
+  role             = aws_iam_role.lambda_role.arn
   source_code_hash = filebase64sha256("${path.module}/Function.zip")
 
 }
