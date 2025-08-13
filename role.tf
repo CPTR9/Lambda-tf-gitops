@@ -33,7 +33,7 @@ resource "aws_iam_policy" "lambda_policy" {
         Action = [
           "logs:CreateLogGroup",
           "logs:CreateLogStream",
-          "logs:PutLogEvent"
+          "logs:PutLogEvents"
         ]
         Resource = "arn:aws:logs:*:*:*"
       }
